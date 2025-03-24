@@ -4,13 +4,38 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <title>Tate vr scene</title>
+   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script> 
 </head>
 
 <body>
-  Hello world
-  <script src="script.js"></script>
+  <a-scene>
+    <a-entity environment="preset:goaland; dressingAmount:300;skyColor:blue"></a-entity>
+<!-- Start of house-->
+    <a-cylinder id="floor" position="0 0 0" radius="7.5" color="black" height="0.1"></a-cylinder>
+    <a-box id="wall1_" position=" 0  1.473  4.907" rotation="0  0  0" scale="10  3  0.2 " color="blue"></a-box>
+    <a-box id="wall2_" position=" 0  1.473  -4.907" rotation="0  0  0" scale="10  3  0.2 " color="blue"></a-box>
+    <a-box id="wall3_" position="5.049  1.454  -0.008" rotation="0 -90" scale="10  3  0.2 " color="blue"></a-box>
+    <a-box id="wall4_" position="-5.049  1.454  -0.008" rotation="0 -90" scale="10  3  0.2 " color="blue"></a-box>
+    <a-cylinder id="triangle_front" segments-radial="3" position="0  3.874 4.907" rotation="-90  0  0" scale="5.774  0.2  1.8" color="blue"></a-cylinder>
+      <a-cylinder id="triangle_back" segments-radial="3" position="0  3.874 -4.907" rotation="-90  0  0" scale="5.774  0.2  1.8" color="blue"></a-cylinder>
+    <a-box id="roof_right" position="2.580  4.328  0" rotation="28.433  90  0" scale="10.931 0.20  6.110" color="black"></a-box>
+    <a-box id="roof_left" position="-2.599  4.3321  -0.017" rotation="28.433  -90  0" scale="10.931 0.20  6.130" color="black"></a-box><!--end of house-->
+<!--artwork start-->
+    <!--frame-->
+    <a-box id="frame" position="0 1.696 -4.841" rotation="0 0 0" scale="3 3 0.2" src="images/gold_frame.jpg"> 
+    <a-plane id="art1" src="images/small_burger.jpg" scale="0.7 0.7 0.7" rotation="0 0 0" position="0.002  0.002  0.519" ></a-plane>
+    </a-box>
+    
+  
+       <a-plane id="art2" src="images/big_burger.jpg" scale="2 2 0.05" rotation="0.000 90.00 0.000" position="-4.946 1.550 -2.178" ></a-plane>
+<!-- 3d oblect-->
+      <a-obj-model id="3dModel1" src="images/tinker.obj" mtl="images/obj.mtl" position="0 0 0" rotation="-90 0 0" scale="0.03 0.03 0.03 "></a-obj-model>
+      
+      
+  </a-scene>
+
 </body>
 
 </html>
